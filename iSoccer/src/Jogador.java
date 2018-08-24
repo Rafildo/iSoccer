@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Jogador extends Funcionario {
 
@@ -14,6 +15,7 @@ public class Jogador extends Funcionario {
         this.position = position;
         this.available = available;
     }
+
 
     public String toString()
     {
@@ -32,11 +34,15 @@ public class Jogador extends Funcionario {
         return position;
     }
 
-    public void setPosition(String type) {
-        this.position = type;
+    public String isAvailable() {
+        if (isAvailability()) {
+            return "Disponível";
+        } else {
+            return "Não disponível";
+        }
     }
 
-    public boolean isAvailable() {
+    public boolean isAvailability() {
         return available;
     }
 

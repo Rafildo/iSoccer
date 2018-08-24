@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class Centro_Treinamento extends Recurso {
-    public ArrayList<Centro_Treinamento> centre = new ArrayList<>();
 
     private int dormitories;
 
@@ -23,8 +22,8 @@ public class Centro_Treinamento extends Recurso {
     public String toString()
     {
         return("Nome do centro: " + this.getName() + System.lineSeparator() +
-        "Número de dormitórios: " + this.getDormitories() + System.lineSeparator() +
-        "Disponibilidade: " + this.isAvailable());
+                "Número de dormitórios: " + this.getDormitories() + System.lineSeparator() +
+                "Disponibilidade: " + this.isAvailable());
     }
 
 }

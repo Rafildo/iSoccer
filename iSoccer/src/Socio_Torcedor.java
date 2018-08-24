@@ -1,9 +1,8 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Socio_Torcedor {
-    private ArrayList <Socio_Torcedor> torcedor = new ArrayList<>();
+    private ArrayList <Socio_Torcedor> cheerer = new ArrayList<>();
     private ArrayList<String> inTime = new ArrayList<>();
     private ArrayList<String> notInTime = new ArrayList<>();
 
@@ -16,8 +15,8 @@ public class Socio_Torcedor {
     private String type;
     private boolean status;
 
-    public ArrayList<Socio_Torcedor> getTorcedor() {
-        return torcedor;
+    public ArrayList<Socio_Torcedor> getCheerer() {
+        return cheerer;
     }
 
     public ArrayList<String> getInTime() {
@@ -26,6 +25,11 @@ public class Socio_Torcedor {
 
     public ArrayList<String> getNotInTime() {
         return notInTime;
+    }
+
+    public void addCheerer(Socio_Torcedor chee)
+    {
+        cheerer.add(chee);
     }
 
     public Socio_Torcedor(String name, String email, String cpf, String phone, String address, Double contribution,

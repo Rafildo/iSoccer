@@ -42,49 +42,9 @@ public class Funcionario_Controlador  {
                 break;
 
             case "Jogador":
-
-                System.out.println("Posição do jogador:");
-                String position = input.nextLine();
-                System.out.println("Disponível(Sim ou Não):");
-                String availability = input.nextLine();
-                if (availability.equals("Sim")) {
-                    employeeset.addEmployee(new Jogador(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
-                            employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary(),
-                            position, true));
-                    Jogador.able.add(employeeset.getName());
-                }
-                else if (availability.equals("Não")) {
-                    employeeset.addEmployee(new Jogador(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
-                            employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary(),
-                            position, false));
-                    Jogador.unable.add(employeeset.getName());
-                }
-                else
-                {
-                    while(true)
-                    {
-                        System.out.println("Por favor digite Sim ou Não!");
-                        availability = input.nextLine();
-                        if (availability.equals("Sim") || (availability.equals("Não")))
-                        {
-                            if (availability.equals("Sim"))
-                            {
-                                employeeset.addEmployee(new Jogador(employeeset.getEmployeeType(),employeeset.getName(),
-                                        employeeset.getEmail(),employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary(),
-                                        position, true));
-                                Jogador.able.add(employeeset.getName());
-                            }
-                            else if (availability.equals("Não"))
-                            {
-                                employeeset.addEmployee(new Jogador(employeeset.getEmployeeType(),employeeset.getName(),
-                                        employeeset.getEmail(),employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary(),
-                                        position, false));
-                                Jogador.unable.add(employeeset.getName());
-                            }
-                            break;
-                        }
-                    }
-                }
+                Jogador_Controlador player = new Jogador_Controlador();
+                player.checkPosition(player.setPosition());
+                player.availabilityCheck(input.nextLine());
                 break;
 
             case "Presidente":

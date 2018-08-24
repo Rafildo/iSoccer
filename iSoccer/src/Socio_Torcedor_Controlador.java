@@ -7,7 +7,7 @@ public class Socio_Torcedor_Controlador {
             null,false);
     private ArrayList<String> ingoodstanding = new ArrayList<>();
     private ArrayList<String> notingoodstanding = new ArrayList<>();
-    public Socio_Torcedor getCheerer()
+    public void getCheerer()
     {
         Scanner input = new Scanner(System.in);
         System.out.println("Nome:");
@@ -57,10 +57,9 @@ public class Socio_Torcedor_Controlador {
                 }
             }
         }
-        cheerer.add(new Socio_Torcedor(cheererset.getName(),cheererset.getEmail(),cheererset.getCpf(),cheererset.getPhone(),
-                cheererset.getAddress(),cheererset.getContribution(),checkType(cheererset.getContribution()),
-                cheererset.getStatus()));
-        return cheerer.get(cheerer.size()-1);
+        cheererset.addCheerer(new Socio_Torcedor(cheererset.getName(),cheererset.getEmail(),cheererset.getCpf(),
+                cheererset.getPhone(), cheererset.getAddress(),cheererset.getContribution(),
+                checkType(cheererset.getContribution()),cheererset.getStatus()));
     }
 
     public Double checkContribution(Double contribution)
