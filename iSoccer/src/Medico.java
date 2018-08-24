@@ -1,4 +1,4 @@
-public class Medico extends Funcionarios {
+public class Medico extends Funcionario {
 
     private String crm;
 

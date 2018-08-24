@@ -1,4 +1,4 @@
-public class Cozinheiro extends Funcionarios {
+public class Cozinheiro extends Funcionario {
 
     public Cozinheiro(String employeeType,String name, String email, String cpf, String phone, Double salary)
     {

@@ -1,4 +1,4 @@
-public class Motorista extends Funcionarios {
+public class Motorista extends Funcionario{
 
     private String licensenumber;
 

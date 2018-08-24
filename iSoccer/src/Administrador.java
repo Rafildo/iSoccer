@@ -1,7 +1,7 @@
 public class Administrador {
 
-    String login;
-    String password;
+    private String login;
+    private String password;
 
     public Administrador(String login, String password)
     {

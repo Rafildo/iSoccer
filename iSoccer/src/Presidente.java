@@ -1,4 +1,4 @@
-public class Presidente extends Funcionarios {
+public class Presidente extends Funcionario {
 
     public Presidente(String employeeType,String name, String email, String cpf, String phone, Double salary)
     {

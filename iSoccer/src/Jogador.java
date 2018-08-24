@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Jogador extends Funcionarios {
+public class Jogador extends Funcionario {
 
     private String position;
     private boolean available;

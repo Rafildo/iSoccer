@@ -1,4 +1,5 @@
-public class Treinador extends Funcionarios {
+
+public class Treinador extends Funcionario {
 
     public Treinador(String employeeType,String name, String email, String cpf, String phone, Double salary)
     {
