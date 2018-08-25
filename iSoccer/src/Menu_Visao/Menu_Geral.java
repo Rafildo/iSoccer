@@ -18,7 +18,8 @@ public class Menu_Geral {
             System.out.println("Categorias:");
             System.out.println("1: Funcionário");
             System.out.println("2: Sócio-torcedor");
-            System.out.println("3: Recursos.Recurso");
+            System.out.println("3: Recurso");
+            System.out.println("4: Relatório");
 
             int choice = input.nextInt();
             switch(choice)
@@ -39,6 +40,8 @@ public class Menu_Geral {
                     break;
 
                 case 4:
+                    Relatorios relatoriosmenu = new Relatorios();
+                    relatoriosmenu.Menu();
                     break;
             }
         }

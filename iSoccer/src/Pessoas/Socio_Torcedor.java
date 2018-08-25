@@ -1,13 +1,11 @@
 package Pessoas;
 
-import Pessoas.Funcionarios.Pessoa;
-
 import java.util.ArrayList;
 
 public class Socio_Torcedor extends Pessoa {
-    public ArrayList<Socio_Torcedor> cheerer = null;
-    private ArrayList<String> inTime = new ArrayList<>();
-    private ArrayList<String> notInTime = new ArrayList<>();
+    public static ArrayList<Socio_Torcedor> cheerer = new ArrayList<>();
+    public static ArrayList<String> inTime = new ArrayList<>();
+    public static ArrayList<String> notInTime = new ArrayList<>();
     private String address;
     private Double contribution;
     private String cheerertype;
@@ -29,8 +27,7 @@ public class Socio_Torcedor extends Pessoa {
         this.address = address;
         this.contribution = contribution;
         this.cheerertype = cheerertype;
-        this.status = status;
-        cheerer = new ArrayList<>();
+        this.status = status;;
     }
 
     public String getAddress() {

@@ -8,7 +8,7 @@ public class Recurso {
     private String name;
     private boolean availability;
 
-    private ArrayList<Recurso> resources = new ArrayList<>();
+    public static ArrayList<Recurso> resources = new ArrayList<>();
 
     public ArrayList<Recurso> getResources() {
         return resources;

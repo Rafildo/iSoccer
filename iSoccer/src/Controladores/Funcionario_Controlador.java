@@ -1,6 +1,5 @@
 package Controladores;
 
-import Pessoas.Funcionarios.Funcionario;
 import Pessoas.Funcionarios.*;
 import Utilitarios.Tratamento_erro;
 
@@ -35,14 +34,14 @@ public class Funcionario_Controlador  {
             case "Médico":
                 System.out.println("CRM:");
                 String crm = input.nextLine();
-                employeeset.addEmployee(new Medico(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
+                Funcionario.employee.add(new Medico(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
                         employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary(),crm));
                 break;
 
             case "Pessoas.Funcionarios.Motorista":
                 System.out.println("Número de habilitação");
                 String licensenumber = input.nextLine();
-                employeeset.addEmployee(new Motorista(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
+                Funcionario.employee.add(new Motorista(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
                         employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary(),licensenumber));
                 break;
 
@@ -53,27 +52,27 @@ public class Funcionario_Controlador  {
                 break;
 
             case "Pessoas.Funcionarios.Presidente":
-                employeeset.addEmployee(new Presidente(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
+                Funcionario.employee.add(new Presidente(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
                         employeeset.getCpf(), employeeset.getPhone(),employeeset.getSalary()));
                 break;
 
             case "Preparador Físico":
-                employeeset.addEmployee(new Preparador_Fisico(employeeset.getEmployeeType(),employeeset.getName(), employeeset.getEmail(),
+                Funcionario.employee.add(new Preparador_Fisico(employeeset.getEmployeeType(),employeeset.getName(), employeeset.getEmail(),
                         employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary()));
                 break;
 
             case "Pessoas.Funcionarios.Cozinheiro":
-                employeeset.addEmployee(new Cozinheiro(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
+                Funcionario.employee.add(new Cozinheiro(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
                         employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary()));
                 break;
 
             case "Pessoas.Funcionarios.Advogado":
-                employeeset.addEmployee(new Advogado(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),employeeset.getCpf(),
+                Funcionario.employee.add(new Advogado(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),employeeset.getCpf(),
                         employeeset.getPhone(),employeeset.getSalary()));
                 break;
 
             case "Pessoas.Funcionarios.Treinador":
-                employeeset.addEmployee(new Treinador(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
+                Funcionario.employee.add(new Treinador(employeeset.getEmployeeType(),employeeset.getName(),employeeset.getEmail(),
                         employeeset.getCpf(),employeeset.getPhone(),employeeset.getSalary()));
                 break;
         }

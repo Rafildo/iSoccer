@@ -79,12 +79,12 @@ public class Jogador_Controlador {
         Scanner input = new Scanner(System.in);
         System.out.println("Disponível(Sim ou Não):");
         if (availability.equals("Sim")) {
-            employeeset.addEmployee(new Jogador(employeeset.getEmployeeType(), employeeset.getName(), employeeset.getEmail(),
+            Funcionario.employee.add(new Jogador(employeeset.getEmployeeType(), employeeset.getName(), employeeset.getEmail(),
                     employeeset.getCpf(), employeeset.getPhone(), employeeset.getSalary(),
                     position, true));
             Jogador.able.add(employeeset.getName());
         } else if (availability.equals("Não")) {
-            employeeset.addEmployee(new Jogador(employeeset.getEmployeeType(), employeeset.getName(), employeeset.getEmail(),
+            Funcionario.employee.add(new Jogador(employeeset.getEmployeeType(), employeeset.getName(), employeeset.getEmail(),
                     employeeset.getCpf(), employeeset.getPhone(), employeeset.getSalary(),
                     position, false));
             Jogador.unable.add(employeeset.getName());
@@ -94,13 +94,13 @@ public class Jogador_Controlador {
                 availability = input.nextLine();
                 if (availability.equals("Sim") || (availability.equals("Não"))) {
                     if (availability.equals("Sim")) {
-                        employeeset.addEmployee(new Jogador(employeeset.getEmployeeType(), employeeset.getName(),
-                                employeeset.getEmail(), employeeset.getCpf(), employeeset.getPhone(), employeeset.getSalary(),
+                        Funcionario.employee.add(new Jogador(employeeset.getEmployeeType(), employeeset.getName(), employeeset.getEmail(),
+                                employeeset.getCpf(), employeeset.getPhone(), employeeset.getSalary(),
                                 position, true));
                         Jogador.able.add(employeeset.getName());
                     } else if (availability.equals("Não")) {
-                        employeeset.addEmployee(new Jogador(employeeset.getEmployeeType(), employeeset.getName(),
-                                employeeset.getEmail(), employeeset.getCpf(), employeeset.getPhone(), employeeset.getSalary(),
+                        Funcionario.employee.add(new Jogador(employeeset.getEmployeeType(), employeeset.getName(), employeeset.getEmail(),
+                                employeeset.getCpf(), employeeset.getPhone(), employeeset.getSalary(),
                                 position, false));
                         Jogador.unable.add(employeeset.getName());
                     }

@@ -32,7 +32,6 @@ public class Menu_Socio_Torcedor {
             case 2:
                // cheerer.editContributionValue();
                 break;
-
         }
 
     }

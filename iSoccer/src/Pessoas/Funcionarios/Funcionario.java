@@ -1,10 +1,12 @@
 package Pessoas.Funcionarios;
 
+import Pessoas.Pessoa;
+
 import java.util.ArrayList;
 
 
 public class Funcionario extends Pessoa {
-    private ArrayList<Funcionario> employee = new ArrayList<>();
+    public static ArrayList<Funcionario> employee = new ArrayList<>();
     private Double salary;
     private String employeeType;
 

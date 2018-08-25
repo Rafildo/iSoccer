@@ -1,6 +1,6 @@
 package Pessoas.Funcionarios;
 
-public class Motorista extends Funcionario {
+public class Motorista extends Funcionario{
 
     private String licensenumber;
 

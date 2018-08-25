@@ -3,8 +3,6 @@ package Controladores;
 import Recursos.Estadio;
 import Utilitarios.Tratamento_erro;
 
-import java.util.Scanner;
-
 public class Estadio_Controlador {
     Estadio stadium = new Estadio(null,null,0,0,0,false);
 

@@ -3,18 +3,14 @@ package Controladores;
 import Pessoas.Socio_Torcedor;
 import Utilitarios.Tratamento_erro;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Socio_Torcedor_Controlador {
     Socio_Torcedor cheererset = new Socio_Torcedor(null,null,null,null,null,0.0,
             null,false);
-    public ArrayList<Socio_Torcedor> cheerer = new ArrayList<>();
-    private ArrayList<String> ingoodstanding = new ArrayList<>();
-    private ArrayList<String> notingoodstanding = new ArrayList<>();
 
 
-    public Socio_Torcedor addCheerer()
+    public void addCheerer()
     {
         Scanner input = new Scanner(System.in);
         System.out.println("Nome:");
@@ -34,12 +30,12 @@ public class Socio_Torcedor_Controlador {
         if (option == 1)
         {
             cheererset.setStatus(true);
-            ingoodstanding.add(cheererset.getName());
+            Socio_Torcedor.inTime.add(cheererset.getName());
         }
         else if(option == 0)
         {
             cheererset.setStatus(false);
-            notingoodstanding.add(cheererset.getName());
+            Socio_Torcedor.notInTime.add(cheererset.getName());
         }
         else
         {
@@ -53,21 +49,20 @@ public class Socio_Torcedor_Controlador {
                     if (option == 1)
                     {
                         cheererset.setStatus(true);
-                        ingoodstanding.add(cheererset.getName());
+                        Socio_Torcedor.inTime.add(cheererset.getName());
                     }
                     else if (option == 0)
                     {
                         cheererset.setStatus(false);
-                        ingoodstanding.add(cheererset.getName());
+                        Socio_Torcedor.notInTime.add(cheererset.getName());
                     }
                     break;
                 }
             }
         }
-        cheerer.add(new Socio_Torcedor(cheererset.getName(),cheererset.getEmail(),cheererset.getCpf(),
+        Socio_Torcedor.cheerer.add(new Socio_Torcedor(cheererset.getName(),cheererset.getEmail(),cheererset.getCpf(),
                 cheererset.getPhone(), cheererset.getAddress(),cheererset.getContribution(),
                 checkType(cheererset.getContribution()),cheererset.getStatus()));
-        return cheerer.get(cheerer.size()-1);
     }
 
 
