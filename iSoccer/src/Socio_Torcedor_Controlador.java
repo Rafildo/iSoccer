@@ -2,12 +2,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Socio_Torcedor_Controlador {
-    private ArrayList<Socio_Torcedor> cheerer = new ArrayList<>();
     Socio_Torcedor cheererset = new Socio_Torcedor(null,null,null,null,null,0.0,
             null,false);
+    public ArrayList<Socio_Torcedor> cheerer = new ArrayList<>();
     private ArrayList<String> ingoodstanding = new ArrayList<>();
     private ArrayList<String> notingoodstanding = new ArrayList<>();
-    public void getCheerer()
+
+
+    public Socio_Torcedor addCheerer()
     {
         Scanner input = new Scanner(System.in);
         System.out.println("Nome:");
@@ -57,10 +59,22 @@ public class Socio_Torcedor_Controlador {
                 }
             }
         }
-        cheererset.addCheerer(new Socio_Torcedor(cheererset.getName(),cheererset.getEmail(),cheererset.getCpf(),
+        cheerer.add(new Socio_Torcedor(cheererset.getName(),cheererset.getEmail(),cheererset.getCpf(),
                 cheererset.getPhone(), cheererset.getAddress(),cheererset.getContribution(),
                 checkType(cheererset.getContribution()),cheererset.getStatus()));
+        return cheerer.get(cheerer.size()-1);
     }
+
+    public Socio_Torcedor getCheerer()
+    {
+        return cheerer.get(cheerer.size()-1);
+    }
+
+    public void printCheerer()
+    {
+        System.out.println(getCheerer());
+    }
+
 
     public Double checkContribution(Double contribution)
     {
@@ -86,38 +100,41 @@ public class Socio_Torcedor_Controlador {
     {
         if (contribution == 50)
         {
-            cheererset.setType("Júnior");
+            cheererset.setCheererType("Júnior");
         }
         else if(contribution == 110)
         {
-            cheererset.setType("Sênior");
+            cheererset.setCheererType("Sênior");
         }
         else if(contribution == 180)
         {
-            cheererset.setType("Elite");
+            cheererset.setCheererType("Elite");
         }
-        return cheererset.getType();
+        return cheererset.getCheererType();
     }
-   /* public void editContributionValue()
+    /*public void editContributionValue()
     {
         Scanner input = new Scanner(System.in);
-        System.out.println("Escolha o sócio-torcedor");
-        String cheerer = input.nextLine();
-        for (int i = 0; i < torcedor.size() ; i++)
+        System.out.println("Escolha o sócio-torcedor:");
+        String cheerername = input.nextLine();
+        for (int i = 0; i < cheererset.getCheerer().size() ; i++)
         {
-            if (torcedor.get(i).getName().equals(cheerer))
+            System.out.println("oi");
+            if (cheererset.getCheerer().get(i).getName().equals(cheerername))
             {
-                System.out.println("Digite o novo valor da contribuição");
-                contribution = Tratamento_erro.checkDouble();
+                System.out.println("Digite o novo valor da contribuição:");
+                double contribution = checkContribution(Tratamento_erro.checkDouble());
+                cheererset.getCheerer().get(i).setContribution(contribution);
+                cheererset.getCheerer().get(i).setCheererType(checkType(contribution));
                 System.out.println("Digite a nova situação de pagamento (1 para adimplente ou 0 para inadimplente)");
                 int statusint = Tratamento_erro.checkInt();
                 if (statusint == 1)
                 {
-                    status = true;
+                    cheererset.getCheerer().get(i).setStatus(true);
                 }
                 else if (statusint == 0)
                 {
-                    status = false;
+                    cheererset.getCheerer().get(i).setStatus(false);
                 }
                 else
                 {
@@ -127,12 +144,12 @@ public class Socio_Torcedor_Controlador {
                         statusint = Tratamento_erro.checkInt();
                         if (statusint == 1)
                         {
-                            status = true;
+                            cheererset.getCheerer().get(i).setStatus(true);
                             break;
                         }
                         else if ( statusint == 0)
                         {
-                            status = false;
+                            cheererset.getCheerer().get(i).setStatus(false);
                             break;
                         }
                     }

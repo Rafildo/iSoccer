@@ -5,7 +5,8 @@ public class Principal {
     {
         while(!var)
         {
-
+            Menu_Geral menu = new Menu_Geral();
+            menu.displayMenu();
         }
     }
 }

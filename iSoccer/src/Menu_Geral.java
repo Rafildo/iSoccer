@@ -24,13 +24,17 @@ public class Menu_Geral {
             {
                 case 1:
                     Menu_Funcionario employeemenu = new Menu_Funcionario();
-                    employeemenu.Service_choice();
+                    employeemenu.serviceChoice();
                     break;
 
                 case 2:
+                    Menu_Socio_Torcedor cheerermenu = new Menu_Socio_Torcedor();
+                    cheerermenu.serviceChoice();
                     break;
 
                 case 3:
+                    Menu_Recurso resourcemenu = new Menu_Recurso();
+                    resourcemenu.serviceChoice();
                     break;
 
                 case 4:

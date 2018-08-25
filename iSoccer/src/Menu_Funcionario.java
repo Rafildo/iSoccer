@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class Menu_Funcionario {
 
-    public void Service_choice()
+    public void serviceChoice()
     {
         Scanner input = new Scanner(System.in);
         System.out.println("1: Adicionar funcionário");
         System.out.println("2: Editar funcionário");
-        int choice = input.nextInt();
-        Service_check(choice);
+        int choice = Tratamento_erro.checkInt();
+        serviceCheck(choice);
     }
 
-    public void Service_check(int choice)
+    public void serviceCheck(int choice)
     {
         switch (choice)
         {
