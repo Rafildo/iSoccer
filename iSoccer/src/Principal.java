@@ -1,3 +1,5 @@
+import Menu_Visao.Menu_Geral;
+
 public class Principal {
     private static boolean var = false;
 
